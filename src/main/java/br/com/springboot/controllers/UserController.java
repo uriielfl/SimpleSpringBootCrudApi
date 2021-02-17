@@ -23,7 +23,7 @@ public class UserController {
 
     @GetMapping("/{id}")
     public User user(@PathVariable("id") Long id){  
-        System.out.println("O id e " + id);
+        System.out.println("O id é " + id);
         Optional<User> userFind = users.stream().filter(user -> user.getId() == id).findFirst();
 
         if(userFind.isPresent()){
